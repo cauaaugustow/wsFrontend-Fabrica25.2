@@ -1,0 +1,29 @@
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+input{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--corheader);
+    background-color: var(--cordefundo);
+    color: var(--corblack);
+    font-size: 1.5rem;
+}
+
+button{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--corheader);
+    color: var(--cordefundo);
+    font-size: 1.5rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
