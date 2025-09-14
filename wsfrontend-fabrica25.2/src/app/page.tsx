@@ -6,13 +6,30 @@ import { SearchMenu } from '../components/SearchMenu'
 import { PokeList } from '../components/PokeList';
 import { getPokeList } from '../services/getPokeListALL'
 import { useEffect, useState, } from 'react'
-import { on } from 'events';
-import { SearchParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
 
 
+interface Pokemon {
+  name: string;
+  id: number;
+}
 
 export default function Home() {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredPokemons, setFilteredPokemons] = useState(pokemons);
+
+const handleSearch = (value: string) => {
+  setSearchInput(value);
+  if (value.trim() === "") {
+    setFilteredPokemons(pokemons);
+  } else {
+    const filtered = pokemons.filter(p =>
+      p.name.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredPokemons(filtered);
+  }
+};
+
   
 
 
@@ -29,7 +46,7 @@ export default function Home() {
     <>
         <HeaderBanner />
       <main>
-        <SearchMenu/>
+        <SearchMenu onSearch={handleSearch} searchValue={searchInput} />
         <PokeList pokemons={pokemons} />
         <FooterMenu/>
       </main>
