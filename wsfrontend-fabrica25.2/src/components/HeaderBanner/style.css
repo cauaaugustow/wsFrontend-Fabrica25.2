@@ -3,9 +3,37 @@ header{
     font-size: 1.5rem;
     background-color: var(--corheader);
     color: var(--cordefundo);
+
 }
 
 h1{
     text-align: center;
     margin-top: 2.3rem;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.bookmarkIcon{
+    margin-left: 8rem;
+    margin-top: 3.3rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cordefundo);
+    transition: 0.5s;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 1440px) {
+    h1{
+        font-size: 3.5rem;
+    }
 }

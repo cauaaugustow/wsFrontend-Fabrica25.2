@@ -15,7 +15,7 @@ input{
     font-size: 1.5rem;
 }
 
-button{
+.btnSearch{
     padding: 1.5rem;
     border-radius: 1rem;
     border: none;
@@ -24,6 +24,37 @@ button{
     font-size: 1.5rem;
 }
 
-button:hover{
+.btnSearch:hover{
     cursor: pointer;
+}
+
+.title{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+@media screen and (min-width: 425px) {
+    input{
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    input{
+        width: 40rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    input{
+        width: 50rem;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .btnSearch{
+        padding: 2rem;
+        font-size: 2rem;
+    }
 }

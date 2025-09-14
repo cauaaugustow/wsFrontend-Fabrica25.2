@@ -1,4 +1,5 @@
 import '../../app/page'
+import Image from 'next/image'
 
 
 import './style.css'
@@ -7,7 +8,7 @@ export function HeaderBanner(){
     return(
         <header>
             <nav>
-                <h1>PokéHub</h1>
+                <a href="../"><h1>PokeHub</h1></a>
             </nav>
         </header>
     )

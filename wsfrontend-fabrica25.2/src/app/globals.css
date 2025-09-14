@@ -2,6 +2,9 @@
 :root {
   --cordefundo: #ffffff;
   --corheader: red;
+  --corblack: #000000;
+  --corpoker: #f1ebeb;
+  --corinfo: #c4c4c4;
 }
 
 html{
