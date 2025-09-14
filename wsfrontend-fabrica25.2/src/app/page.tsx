@@ -6,6 +6,8 @@ import { SearchMenu } from '../components/SearchMenu'
 import { PokeList } from '../components/PokeList';
 import { getPokeList } from '../services/getPokeListALL'
 import { useEffect, useState, } from 'react'
+import { on } from 'events';
+import { SearchParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
 
 
 
@@ -17,6 +19,7 @@ export default function Home() {
     useEffect(() => {
     getPokeList().then((data: any) => {
       setPokemons(data);
+
     });
   }, []);
 
@@ -32,6 +35,4 @@ export default function Home() {
       </main>
     </>
   );
-
-  
 }

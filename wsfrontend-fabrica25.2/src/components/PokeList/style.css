@@ -59,13 +59,16 @@
 }
 
 
-.VisualizacaoBtn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    text-decoration: none;
+.visualizacaoBtn{
+    border-radius: 2rem;
+    transition: .2s;
+    cursor: pointer;
+    border: 0;
+    font-size: 20px;
+    background-color: var(--corheader);
+    cursor: pointer;
+    margin: 4px;
+    padding: 1.5rem;
     
 }
 

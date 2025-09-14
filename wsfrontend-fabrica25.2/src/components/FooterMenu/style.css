@@ -7,10 +7,6 @@ footer{
     margin-top: 7rem;
 }
 
-footer img{
-    width: 150px;
-    height: 150px;
-}
 
 footer .flex{
     justify-content: space-between;
@@ -38,14 +34,15 @@ footer .line-footer{
     border-top: 2px solid var(--cordefundo);
 }
 
-footer .line-footer i{
-    font-size: 22px;
-    color: var(--corheader);
-}
-
 footer .line-footer a{
     text-decoration: none;
     margin: 10px;
     color: var(--cordofundo);
 
+}
+
+footer .line-footer p{
+    margin: 10px;
+    color: var(--cordefundo);
+    text-align: center;
 }

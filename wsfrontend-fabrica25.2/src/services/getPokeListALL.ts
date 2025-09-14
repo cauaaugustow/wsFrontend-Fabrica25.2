@@ -1,6 +1,6 @@
 
 export async function getPokeList() {
-    return fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
+    return fetch("https://pokeapi.co/api/v2/pokemon?limit=200&offset=0")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Nenhum pokemon encontrado.");

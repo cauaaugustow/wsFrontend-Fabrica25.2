@@ -1,5 +1,6 @@
 import '../../app/page'
-
+import Image from 'next/image'
+import GitIcon from '../../assets/github.svg'
 
 import './style.css'
 
@@ -12,14 +13,13 @@ export function FooterMenu(){
                             <h2>PokeHub</h2>
                         </div>
                         <div className="cont-footer">
-                            <a href="#"><button><></></button></a>
-                            <a href="#"><button><></></button></a>
-                            <a href="#"><button><></></button></a>
+                            <a href="https://github.com/cauaaugustow"><button><>
+                                <Image src={GitIcon} alt="GitHub" width={40} height={40}/></></button></a>
                         </div>
                     </div>
                 </div>
                 <div className="line-footer">
-                    <p><a href="#">cauaaugusto@gmail.com</a></p>
+                    <p>Desenvolvido por Cauã Augusto</p>
                 </div>
             </footer>
     )

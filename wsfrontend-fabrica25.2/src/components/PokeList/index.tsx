@@ -4,8 +4,8 @@ import React from 'react'
 import Image from 'next/image'
 import './style.css'
 import { useState } from 'react'
-import HorizonIcon from '../../assets/distribute-horizontal.svg'
-import VerticalIcon from '../../assets/distribute-vertical.svg'
+import HorizonIcon from '../../assets/grid-fill.svg'
+import VerticalIcon from '../../assets/list.svg'
 
 type Pokemon = {
     name: string,
@@ -19,12 +19,12 @@ type PokeListProps = {
 export function PokeList({pokemons}:PokeListProps){
         const [visibility, setVisibility] = useState(true)
     
-    function toggleToGrid(e: React.MouseEvent<HTMLAnchorElement>) {
+    function alternaraGrade(e: React.MouseEvent<HTMLAnchorElement>) {
         e.preventDefault()
         setVisibility(false)
       }
     
-      function toggleToList(e: React.MouseEvent<HTMLAnchorElement>) {
+      function alternaraLista(e: React.MouseEvent<HTMLAnchorElement>) {
         e.preventDefault()
         setVisibility(true)
       }
@@ -32,8 +32,8 @@ export function PokeList({pokemons}:PokeListProps){
      return(
         <>
             <div className='visualizacao'>
-                <a className='visualizacaoBtn' onClick={toggleToGrid}><Image src={VerticalIcon} alt="Visão em grade" width={22} height={22}/></a>
-                <a className='visualizacaoBtn' onClick={toggleToList}><Image src={HorizonIcon} alt="Visão em lista" width={24} height={24}/></a>
+                <a className='visualizacaoBtn' onClick={alternaraGrade}><Image src={HorizonIcon} alt="Visão em grade" width={22} height={22}/></a>
+                <a className='visualizacaoBtn' onClick={alternaraLista}><Image src={VerticalIcon} alt="Visão em lista" width={24} height={24}/></a>
             </div>
   
          <section id= {visibility ? 'pokemonsList' : 'pokemonsGrid'}>
